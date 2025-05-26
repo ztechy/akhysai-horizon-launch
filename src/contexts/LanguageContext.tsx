@@ -11,6 +11,7 @@ interface LanguageContextType {
 
 const translations = {
   en: {
+    logoName: 'Akhysai',
     comingSoon: "Coming Soon",
     projectDescription: "Akhysai is a website and mobile app designed to provide two core services:",
     homeAppointments: "Home Appointments for in-person physiotherapy and other medical specialties.",
@@ -23,8 +24,9 @@ const translations = {
     tagline: "Professional Healthcare at Your Fingertips"
   },
   ar: {
+    logoName: 'أخصائي',
     comingSoon: "قريباً",
-    projectDescription: "أخيساي هو موقع ويب وتطبيق محمول مصمم لتقديم خدمتين أساسيتين:",
+    projectDescription: "اخصائي هو موقع ويب وتطبيق محمول مصمم لتقديم خدمتين أساسيتين:",
     homeAppointments: "المواعيد المنزلية للعلاج الطبيعي والتخصصات الطبية الأخرى الشخصية.",
     onlineTherapy: "مواعيد العلاج عبر الإنترنت لدعم الصحة النفسية عن بُعد وجلسات العلاج.",
     stayTuned: "ترقبوا المزيد",

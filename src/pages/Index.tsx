@@ -22,7 +22,7 @@ const Index = () => {
       </div>
 
       {/* Header controls */}
-      <div className="absolute top-6 right-6 flex items-center space-x-3 rtl:space-x-reverse z-10">
+      <div className="absolute top-6 right-6 flex items-center space-x-3 rtl:space-x-reverse z-20">
         <LanguageToggle />
         <ThemeToggle />
       </div>
