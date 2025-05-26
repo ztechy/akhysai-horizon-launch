@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/hooks/useLanguage';
 import { useTheme } from '../contexts/ThemeContext';
 import LogoPlaceholder from '../components/LogoPlaceholder';
 import TypingText from '../components/TypingText';
@@ -213,7 +213,7 @@ const Index = () => {
       </div>
 
       {/* Custom CSS for animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           33% { transform: translateY(-10px) rotate(2deg); }

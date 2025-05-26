@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Check } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const EmailNotification: React.FC = () => {
   const { t } = useLanguage();

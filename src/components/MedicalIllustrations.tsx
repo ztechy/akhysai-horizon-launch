@@ -76,7 +76,7 @@ export const MedicalCrossIllustration: React.FC<{ className?: string }> = ({ cla
   </svg>
 );
 
-export const PillsIllustration: React.FC<{ className?: string }> = ({ className = "" }) => (
+export const PillsIllustration: React.FC<{ className?: string; style?: React.CSSProperties }> = ({ className = "", style }) => (
   <svg className={className} viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="pill1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -98,6 +98,4 @@ export const PillsIllustration: React.FC<{ className?: string }> = ({ className 
     <line x1="40" y1="65" x2="80" y2="55" stroke="#1e40af" strokeWidth="2"/>
     <circle cx="140" cy="70" r="3" fill="#047857"/>
   </svg>
-);
-</svg>
 );

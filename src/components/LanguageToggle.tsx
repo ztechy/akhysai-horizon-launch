@@ -1,15 +1,13 @@
 
 import React from 'react';
 import { Globe } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const LanguageToggle: React.FC = () => {
   const { language, setLanguage } = useLanguage();
 
   const handleToggle = () => {
-    console.log('Language toggle clicked, current language:', language);
     const newLanguage = language === 'en' ? 'ar' : 'en';
-    console.log('Switching to language:', newLanguage);
     setLanguage(newLanguage);
   };
 

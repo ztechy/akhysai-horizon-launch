@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Heart, Shield } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const LogoPlaceholder: React.FC = () => {
   const { t, language } = useLanguage();
