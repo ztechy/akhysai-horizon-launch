@@ -18,7 +18,7 @@ const App = () => (
         <LanguageProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter  basename="/">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="*" element={<NotFound />} />
