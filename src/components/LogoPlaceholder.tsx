@@ -13,7 +13,7 @@ const LogoPlaceholder: React.FC = () => {
         <div className="flex items-center space-x-1">
           {/* <Heart className="w-6 h-6 text-white" fill="currentColor" />
           <Shield className="w-6 h-6 text-white" /> */}
-          <img  src="../../public/logo.png" alt="logo" />
+          <img  src="./logo.png" alt="logo" />
         </div>
       </div>
       <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
