@@ -7,7 +7,7 @@ import TypingText from '../components/TypingText';
 import ThemeToggle from '../components/ThemeToggle';
 import LanguageToggle from '../components/LanguageToggle';
 import EmailNotification from '../components/EmailNotification';
-import { Home, Video, Stethoscope, Heart } from 'lucide-react';
+import { Home, Video, Stethoscope, Heart, Settings, Clock } from 'lucide-react';
 
 const Index = () => {
   const { t, language } = useLanguage();
@@ -16,9 +16,9 @@ const Index = () => {
     <div className="min-h-screen gradient-bg relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-healthcare-200 dark:bg-healthcare-800 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-healthcare-300 dark:bg-healthcare-700 rounded-full opacity-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-healthcare-400 dark:bg-healthcare-600 rounded-full opacity-15 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-200 dark:bg-yellow-800 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-orange-300 dark:bg-orange-700 rounded-full opacity-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-amber-400 dark:bg-amber-600 rounded-full opacity-15 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Header controls */}
@@ -36,23 +36,41 @@ const Index = () => {
             <LogoPlaceholder />
           </div>
 
-          {/* Coming Soon Title */}
+          {/* Under Maintenance Title */}
           <div className="mb-6 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-slate-100 mb-4">
-              <TypingText 
-                text={t('comingSoon')} 
-                speed={150} 
-                delay={800}
-                className="bg-gradient-to-r from-healthcare-600 to-healthcare-800 dark:from-healthcare-400 dark:to-healthcare-600 bg-clip-text text-transparent"
-              />
-            </h1>
+            <div className="flex items-center justify-center mb-4">
+              <Settings className="w-12 h-12 text-amber-500 dark:text-amber-400 mr-4 rtl:mr-0 rtl:ml-4 animate-spin" style={{ animationDuration: '3s' }} />
+              <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-slate-100">
+                <TypingText 
+                  text={t('underMaintenance')} 
+                  speed={150} 
+                  delay={800}
+                  className="bg-gradient-to-r from-amber-600 to-orange-800 dark:from-amber-400 dark:to-orange-600 bg-clip-text text-transparent"
+                />
+              </h1>
+            </div>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-light">
               {t('tagline')}
             </p>
           </div>
 
+          {/* Maintenance Message */}
+          <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+            <div className="bg-amber-50/80 dark:bg-amber-900/20 backdrop-blur-sm rounded-2xl p-8 border border-amber-200 dark:border-amber-800">
+              <div className="flex items-center justify-center mb-4">
+                <Clock className="w-8 h-8 text-amber-600 dark:text-amber-400 mr-3 rtl:mr-0 rtl:ml-3" />
+                <h2 className="text-2xl font-semibold text-amber-800 dark:text-amber-200">
+                  {t('backSoon')}
+                </h2>
+              </div>
+              <p className="text-lg text-amber-700 dark:text-amber-300 leading-relaxed">
+                {t('maintenanceMessage')}
+              </p>
+            </div>
+          </div>
+
           {/* Project Description */}
-          <div className="mb-12 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="mb-12 animate-slide-up" style={{ animationDelay: '0.9s' }}>
             <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-slate-200/50 dark:border-slate-700/50">
               <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
                 {t('projectDescription')}
@@ -103,18 +121,11 @@ const Index = () => {
           </div>
 
           {/* Email Notification */}
-          <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.9s' }}>
+          <div className="mb-8 animate-slide-up" style={{ animationDelay: '1.2s' }}>
             <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-6">
               {t('notifyMe')}
             </h2>
             <EmailNotification />
-          </div>
-
-          {/* Stay Tuned */}
-          <div className="animate-slide-up" style={{ animationDelay: '1.2s' }}>
-            <p className="text-lg text-slate-600 dark:text-slate-400 font-medium">
-              {t('stayTuned')} ✨
-            </p>
           </div>
         </div>
       </div>
